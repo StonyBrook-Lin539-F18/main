@@ -266,7 +266,7 @@ As before, these are all useless because \$ does not occur inside words.
 But we add them anyways to stick with the procedure.
 \end{example}
 
-- Finally, pick any two $n$-grams of length $i'$ and $i''$ such that $i' + i + i'' = k$ (remember that $i$ is the length of the n-gram $g$ that must padded out, and $k$ is the length of the longest $n$-gram in the grammar).
+- Finally, pick any two $n$-grams of length $i'$ and $i''$ such that $i' + i + i'' = k$ (remember that $i$ is the length of the n-gram $g$ that must be padded out, and $k$ is the length of the longest $n$-gram in the grammar).
   Sandwich $g$ between those $n$-grams and add the result to the grammar $G$.
 
 \begin{example}
