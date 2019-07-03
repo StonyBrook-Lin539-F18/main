@@ -31,7 +31,7 @@ In order to tackle these questions in a precise manner, we need a formal model o
 What might that be?
 It is a safe assumption that a word is phonotactically well-formed iff none of its subparts are ill-formed.
 So *kobinal* is a possible word because there is nothing wrong with a word that starts with *kobina*, has *obina* in the middle, and ends with *obinal*.
-But this just raises the question why *kobina* is an acceptable start, *obina* and a well-formed middle, and *obinal* is an acceptable end.
+But this just raises the question why *kobina* is an acceptable start, *obina* is a well-formed middle, and *obinal* is an acceptable end.
 Well, because their subparts are fine.
 For example, *kobina* is fine because a word can start with *kobin* and have *obina* in the middle.
 Then why can a word start with *kobin*?
@@ -302,7 +302,7 @@ Write an $n$-gram grammar that expresses this fact.
 
 ## A look at German
 
-Unlike English, German is perfectly fine with words that starts with *kn*.
+Unlike English, German is perfectly fine with words that start with *kn*.
 But just like English, it does not like words that start with *rb*.
 We can capture this by writing a trigram grammar for German that contains the forbidden trigram *\$rb*.
 But German also has a process known as word-final devoicing: voiced sounds become voiceless at the end of a word.
@@ -311,7 +311,7 @@ Alright, no big deal, we just forbid *z\$* too.
 Or do we?
 
 We now have a forbidden trigram *\$rb* and a forbidden bigram *z\$*.
-Are allowed to mix bigrams and trigrams this way?
+Are we allowed to mix bigrams and trigrams this way?
 More generally, can every negative $n$-gram grammar also contain $k$-grams, where $k < n$?
 Could this create inconsistencies, or make negative $n$-gram grammars more powerful?
 We'll see in the next section.
