@@ -1,6 +1,6 @@
 **Prerequisites**
 
-- sets(operations)
+- sets (operations)
 - basic math (factorial [to be written])
 
 # Positive $n$-gram grammars
@@ -8,7 +8,7 @@
 We now have a simple model of phonotactics according to which the phonotactic well-formedness can be determined from the chunks that it is built from.
 In a trigram model, for instance, a word is ill-formed iff it contains one or more illicit trigrams.
 We formalize this in terms of a negative $n$-gram grammar, which is a finite set of illicit $n$-grams.
-So far, the models looks rather promising as it can handle a variety of phenomena: word-final devoicing, intervocalic voicing, local assimilation, and various stress rules.
+So far, the model looks rather promising as it can handle a variety of phenomena: word-final devoicing, intervocalic voicing, local assimilation, and various stress rules.
 
 \begin{exercise}
 For each one of the following phenomena, write a negative $n$-gram grammar that handles it correctly.
@@ -191,17 +191,16 @@ Can you identify some general guidelines for when a positive grammar is preferab
 ## ...and back: Translating between positive and negative grammars
 
 We now have two different kinds of $n$-gram grammars: positive grammars, and negative grammars.
-The latter fall into two subtypes, fixed and mixed, but as we have already proved those two are equivalent in the sense that one can freely translate between the two.
+The latter falls into two subtypes, fixed and mixed, but as we have already proved those two are equivalent in the sense that one can freely translate between the two.
 The same is in fact true for positive and negative grammars.
 
 The idea is very simple.
 Suppose that your alphabet (i.e. the set of symbols from which strings are built) contains only *a* and *b*.
-Then consider the language $(\mathit{aba})^+$, which contains *aba*, *ababa*, *abababa*, and so on.
+Then consider the language $(\mathit{aba})^+$, which contains *aba*, *abaaba*, *abaabaaba*, and so on.
 The negative grammar generating this language consists of
 
 1. *\$\$*.
 1. *\$b*,
-1. *aa*,
 1. *bb*,
 1. *b\$*,
 
@@ -209,6 +208,7 @@ The positive grammar, on the other hand, contains
 
 1. *\$a*,
 1. *ab*,
+1. *aa*,
 1. *ba*,
 1. *a\$*
 
