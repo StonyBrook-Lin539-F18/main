@@ -204,7 +204,7 @@ This makes sense: adding nothing to $u$ does not change $u$, just like adding 0 
 Sometimes concatenation is not explicitly indicated, so that instead of $u \stringcat v$ one may simply write $\mathit{uv}$.
 
 \begin{exercise}
-Given an example of distinct $u$ and $v$ such that $u \stringcat v = v \stringcat u$ and neither $u$ nor $v$ is the empty string.
+Give an example of distinct $u$ and $v$ such that $u \stringcat v = v \stringcat u$ and neither $u$ nor $v$ is the empty string.
 \end{exercise}
 
 
