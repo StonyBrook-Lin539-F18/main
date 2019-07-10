@@ -42,7 +42,7 @@ This is just like $(5 + 4) + 3 = 5 + (4 + 3)$.
 It is also *commutative*.
 That is to say, the order of arguments does not matter: $A \cup B = B \cup A$.
 This again mirrors addition, where $5 + 3 = 3 + 5$.
-Also note that $A \cup \emptyset = \emptyset$ for any set $A$, just like $n + 0 = n$ for any number $n$.
+Also note that $A \cup \emptyset = A$ for any set $A$, just like $n + 0 = n$ for any number $n$.
 
 \begin{exercise}
 Compute the union of the following in a step-wise fashion:
@@ -55,7 +55,7 @@ Compute the union of the following in a step-wise fashion:
 
 ## Intersection
 
-Intersection is the opposition of union in that it builds smaller sets rather than bigger ones.
+Intersection is the opposite of union in that it builds smaller sets rather than bigger ones.
 Given two sets $A$ and $B$, their *intersection* $A \cap B$ is the set that contains only those elements that belong to $A$ as well as $B$.
 
 \begin{example}
@@ -104,7 +104,7 @@ Even though $(\setof{0,1} - \setof{0}) - \setof{2} = \setof{1} = \setof{0,1} - (
 For example, $(\setof{0,1} - \setof{0}) - \setof{1} = \emptyset$, whereas $\setof{0,1} - (\setof{0} - \setof{1}) = \setof{1}$.
 Since associativity requires that the order of evaluation may never matter, this example where it does matter is sufficient to show that associativity does not hold.
 This mirrors subtraction for numbers, where $(5 - 2) - 3 = 0 \neq 6 = 5 - (2 -3)$.
-Commutativity does not hold for relative complement either, as is shown by $\setof{5} - \setof{5,4} = \emptyset \neq \setof{4} = \setof{5,4} - \setof{4}$.
+Commutativity does not hold for relative complement either, as is shown by $\setof{5} - \setof{5,4} = \emptyset \neq \setof{4} = \setof{5,4} - \setof{5}$.
 
 \begin{exercise}
     Give a concrete example where $A - B = B - A$.
