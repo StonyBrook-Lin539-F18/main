@@ -52,3 +52,4 @@ But then $g \in ^-G'$, which entails $s \notin L(^-G')$.
 This shows that $s \in L(^+G)$ iff $s \in L(^-G')$.
 As $s$ was arbitrary, this holds for all strings and establishes $L(^+G) = L(^-G')$, which concludes our proof.
 \end{proof}
+
