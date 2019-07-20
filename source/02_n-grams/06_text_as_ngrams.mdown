@@ -14,7 +14,7 @@ But that requires a lot of time and skill, and may simply not be feasible in pra
 How does one adequately summarize, say, the 1130 pages of Robert Musil's *The Man Without Qualities*, or Grigori Perelman's proof of the Poincaré conjecture?
 Whatever the right answer, it probably isn't something that can be done quickly and automatically.
 And while one may be able to pay experts to work on these outstanding accomplishments, it's much harder to find somebody to summarize papers on cell biology because there are so many published every day.
-With internet websites, human summarization is completely impossible given how often they are updated and how many new ones are created every minutes.
+With internet websites, human summarization is completely impossible given how often they are updated and how many new ones are created every minute.
 So instead computers have to do the job, and since we haven't figured out a way yet to get computers to understand text, the models are necessarily simple and focussed on surface features.
 Virtually all of them build on $n$-grams, the core idea being that the meaning of a text can be equated with the words that occur in it.
 
