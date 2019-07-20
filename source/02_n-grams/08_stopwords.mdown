@@ -18,7 +18,7 @@ $$
     w_4 & \is \setof{\text{Aristotle}: 0, \text{ethics}: 7, \text{metaphysics}: 3, \text{Plato}: 9, \text{Sokrates}: 0}\\
 \end{array}
 $$
-With these counts, the best match for the query *Aristotle metaphysics* is $w_1$ (assuming that the first word of the query is 50\% more important than the second one).
+With these counts, the best match for the query *Aristotle metaphysics* is $w_1$ (assuming that the first word of the query is 50% more important than the second one).
 Now suppose that the query is *Aristotle's metaphysics*, which we analyze as consisting of three words: *Aristotle*, the possessive marker *'s*, and *metaphysics*.
 Since we have no counts for the possessive marker, the results don't change and $w_1$ is still the best match.
 
@@ -35,20 +35,20 @@ $$
     \text{'s}: 86}\\
 \end{array}
 $$
-The corresponding multisets for the words in the query are $_MA$ for *Aristotle*, $_MP$ for *metaphysics*, and $_MS$ for the possessive marker.
+The corresponding multisets for the words in the query are $A_M$ for *Aristotle*, $_MP$ for *metaphysics*, and $_MS$ for the possessive marker.
 $$
 \begin{array}{rl}
-    _MA & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
-    _MP & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
-    _MS & \is \setof{w_1: 20, w_2: 27, w_3: 2, w_4: 86}\\
+    A_M & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
+    P_M & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
+    S_M & \is \setof{w_1: 20, w_2: 27, w_3: 2, w_4: 86}\\
 \end{array}
 $$
 Let's assume a weighting where the counts for the $n$-th query are multiplied by $\frac{1}{n}$ (rounded down).
 $$
 \begin{align*}
-    1 \multimult _MA \multisum
-    \frac{1}{2} \multimult _MS \multisum
-    \frac{1}{3} \multimult _MP
+    1 \multimult A_M \multisum
+    \frac{1}{2} \multimult S_M \multisum
+    \frac{1}{3} \multimult P_M
     &=
     \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}
     \multisum
@@ -75,7 +75,7 @@ This is due to **Zipf's law**, which was formulated by the linguist [George King
     Then the frequency $f$ of a word in $t$ is inversely proportional to its rank $r$ in $R$ ($f = \frac{1}{r}$).
 \end{definition}
 
-Zipf's law tell us that the most common word in a text occurs
+Zipf's law tells us that the most common word in a text occurs
 
 - two times as often as the second most common one,
 - three times as often as the third most common one,
@@ -84,7 +84,7 @@ Zipf's law tell us that the most common word in a text occurs
 
 So if the most common word occurs 100 times, the second occurs 50 times, the third one 33 times, the fourth one 25 times, and so on.
 As in all statistical claims, there is a certain margin of error, so the second word may actually occur 57 times and the third one 26 times.
-It also happens quite a lot that multiple word have approximately the same rank.
+It also happens quite a lot that multiple words have approximately the same rank.
 This means that the most common word may occur 100 times, the next three each around 50 times, and then the next two 33 times.
 In this case, Zipf's law still holds across ranks, but each rank may correspond to multiple words.
 
@@ -185,7 +185,6 @@ We ignore capitalization, but treat punctuation as separate words.
 <li>*nothing*: keep</li>
 <li>*new*: keep</li>
 <li>*.*: keep</li>
-<li>
 </ol>
 
 After stop word removal, the sentence has been truncated to *sun shone, alternative, nothing new*.
@@ -207,7 +206,7 @@ Igoring capitalization, what do the following strings look like after stop word 
 <li>Some student hates some professor.</li>
 </ol>
 
-Are there any sentences whose original meaning can still inferred after stop word removal?
+Are there any sentences whose original meaning can still be inferred after stop word removal?
 If so, why might that be?
 \end{exercise}
 
@@ -314,7 +313,7 @@ None of these distinctions affect what output is produced by $\mathrm{del}(s,S)$
 This is the strength of a mathematical definition of a function.
 It cuts out the procedural details to clearly state the connection between inputs and outputs.
 
-You might be flummoxed, though, that we defined $\mathrm{del}(s,S)$ is plain English. 
+You might be flummoxed, though, that we defined $\mathrm{del}(s,S)$ in plain English. 
 All the functions you know from school were probably stated in terms of equations, e.g. $f(x,y,z) = x^y - 5 \mult z$.
 This isn't a necessity.
 Sometimes a function can be stated clearly enough without special notation.
