@@ -193,3 +193,4 @@ And if you still can't work your way through it after half an hour, just put it 
 - Negative grammars are combined via union.
 - Positive grammars are combined via intersection.
 - The duality between negative grammars and union on the one hand and positive grammars and intersection on the other follows from De Morgan's law: $A \cap B = \overline{\overline{A} \cup \overline{B}}$
+
