@@ -42,12 +42,12 @@ Complete the table below this exercise.
 You can use the Python code to help you with this.
 \end{exercise}
 
-| A             | B                 | $A \subseteq B$? | $A \supseteq B$? | 
-| :--           | :--               | :--              | :--              | 
-| $\setof{a,b}$ | $\setof{a,a,b,c}$ |                  |                  | 
-| $\setof{a}$   | $\setof{b}$       |                  |                  | 
-| $\setof{}$    | $\setof{a}$       |                  |                  | 
-| $\setof{a,b}$ | $\setof{a,a,b,b}$ |                  |                  | 
+| A                     | B                         | $A \subseteq B$?      | $A \supseteq B$? | 
+| :--                   | :--                       | :--                   | :--              | 
+| $\setof{a,b}$         | $\setof{a,a,b,c}$         |                       |                  | 
+| $\setof{a}$           | $\setof{b}$               |                       |                  | 
+| $\setof{}$            | $\setof{a}$               |                       |                  | 
+| $\setof{a,b}$         | $\setof{a,a,b,b}$         |                       |                  | 
 
 
 ```python
@@ -127,12 +127,12 @@ But there can be no $A$ and $B$ such that $A \subsetneq B$ and $B \subsetneq A$.
 For each line in the table, say whether the sets are disjoint, incomparable, identical, or stand in a proper subset/superset relation.
 \end{exercise}
 
-| A               | B                                                 | 
-| :--             | :--                                               | 
-| $\setof{2,5,8}$ | the set of all odd numbers                        | 
-| $\setof{a,b,c}$ | $\setof{a,b} \cup (\setof{a,c} - \setof{b,d})$    | 
-| $\emptyset$     | $\setof{a,b} \cap (\setof{a,c} - \setof{b,d})$    | 
-| $\emptyset$     | $\setof{a,b} \cap (\setof{a,c} \cap \setof{b,d})$ | 
+| A                     | B                                                 | 
+| :--                   | :--                                               | 
+| $\setof{2,5,8}$       | the set of all odd numbers                        | 
+| $\setof{a,b,c}$       | $\setof{a,b} \cup (\setof{a,c} - \setof{b,d})$    | 
+| $\emptyset$           | $\setof{a,b} \cap (\setof{a,c} - \setof{b,d})$    | 
+| $\emptyset$           | $\setof{a,b} \cap (\setof{a,c} \cap \setof{b,d})$ | 
 
 ## Remarks on notation
 
