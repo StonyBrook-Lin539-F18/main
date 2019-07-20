@@ -14,7 +14,7 @@ Mathematically, this corresponds to the step from sets to multisets.
 
 A multiset is like a set, except that it can contain one and the same element multiple times.
 To highlight this difference, I will subscript multisets with an $M$ where necessary to avoid confusion.
-So whereas $S$ denotes a set, $_MS$ denotes a multiset.
+So whereas $S$ denotes a set, $S_M$ denotes a multiset.
 
 \begin{example}
 The set-of-words model converts the mini-text *Only John could like John* (modulo capitalization) to the set $\setof{\text{only}, \text{john}, \text{could}, \text{like}}$.
@@ -45,11 +45,11 @@ sentence1 = ["only", "john", "could", "like", "john"]
 sentence2 = ["if", "police", "police", "police", "police", "police",
              "then", "police", "police", "police", "police", "police"]
 
-print("Set for\n{}\n is\n{}".format(" ".join(sentence1), ngram_set(sentence1, 2)))
-print("Multiset for\n {}\n is\n{}".format(" ".join(sentence1), ngram_multiset(sentence1, 2)))
+print("Set of bigrams for\n{}\n is\n{}".format(" ".join(sentence1), ngram_set(sentence1, 2)))
+print("Multiset of bigrams for\n {}\n is\n{}".format(" ".join(sentence1), ngram_multiset(sentence1, 2)))
 print()
-print("Set for\n{}\n is\n{}".format(" ".join(sentence2), ngram_set(sentence2, 2)))
-print("Multiset for\n{} is\n{}".format(" ".join(sentence2), ngram_multiset(sentence2, 2)))
+print("Set of bigrams for\n{}\n is\n{}".format(" ".join(sentence2), ngram_set(sentence2, 2)))
+print("Multiset of bigrams for\n{} is\n{}".format(" ".join(sentence2), ngram_multiset(sentence2, 2)))
 ```
 
 \begin{exercise}
@@ -59,10 +59,10 @@ Construct the trigram multiset for *if police police police police police, then 
 ## Counts for frequencies
 
 One major advantage the proper bag-of-words model has over the set-of-words model is that the counts provide direct information about frequency, which can be used in various ways.
-Given a multiset $_MS$, the frequency of some $s \in _MS$ is the count of $s$ divided by the total of all counts.
+Given a multiset $S_M$, the frequency of some $s \in S_M$ is the count of $s$ divided by the total of all counts.
 In mathematical notation, the frequency of $s$ is
-$$\freq{s} \is \frac{_MS(s)}{\card{_MS}}$$
-where $\card{_M S}$ is the total of all counts.
+$$\freq{s} \is \frac{S_M(s)}{\card{S_M}}$$
+where $\card{S_M}$ is the total of all counts.
 
 We can replace the absolute counts in a bag-of-words by relative frequencies.
 Strictly speaking this is no longer a multiset, since the values for a multiset can only be natural numbers.
@@ -75,9 +75,9 @@ But just for notation, it is often nicer to have frequencies instead of counts.
 
 \begin{example}
 Let's go back to the multiset 
-$_MS \is \setof{\text{if police}: 1, \text{police police}: 8, \text{police then}: 1, \text{then police}: 1}$.
+$S_M \is \setof{\text{if police}: 1, \text{police police}: 8, \text{police then}: 1, \text{then police}: 1}$.
 The total number of counts is $11$.
-So after we replace counts by frequencies, $_MS$ becomes $\setof{\text{if police}: \frac{1}{11}, \text{police police}: \frac{8}{11}, \text{police then}: \frac{1}{11}, \text{then police}: \frac{1}{11}}$ (which is no longer a multiset).
+So after we replace counts by frequencies, $S_M$ becomes $\setof{\text{if police}: \frac{1}{11}, \text{police police}: \frac{8}{11}, \text{police then}: \frac{1}{11}, \text{then police}: \frac{1}{11}}$ (which is no longer a multiset).
 \end{example}
 
 ```python
@@ -127,9 +127,9 @@ One can measure the relevance of a text for a given search query based on how mu
 
 \begin{example}
 The sentence *Only John thinks John thinks John likes John* corresponds to the multiset
-$_MS \is \setof{\text{only}: 1, \text{john}: 4, \text{thinks}: 2, \text{likes}: 1}$.
+$S_M \is \setof{\text{only}: 1, \text{john}: 4, \text{thinks}: 2, \text{likes}: 1}$.
 With frequencies instead of counts this is
-$_MS \is \setof{\text{only}: 0.125, \text{john}: 0.5, \text{thinks}: 0.25, \text{likes}: 0.5}$.
+$S_M \is \setof{\text{only}: 0.125, \text{john}: 0.5, \text{thinks}: 0.25, \text{likes}: 0.125}$.
 So the relevance score to the query *john* would be $0.5$.
 \end{example}
 
@@ -172,11 +172,11 @@ $$
 \end{array}
 $$
 
-From this we construct an *Aristotle* multiset $_MA$ and a *metaphysics* multiset $_MP$ (naming it $_MM$ would be too confusing).
+From this we construct an *Aristotle* multiset $A_M$ and a *metaphysics* multiset $P_M$ (naming it $M_M$ would be too confusing).
 $$
 \begin{array}{rl}
-    _MA & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
-    _MP & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
+    A_M & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
+    P_M & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
 \end{array}
 $$
 \end{example}
@@ -191,17 +191,17 @@ This is easily accomplished with **multiset sum**.
 That sounds like a fancy operation, but it's little more than adding up the counts for each element across multisets.
 
 \begin{example}
-Here are the multisets $_MA$ and $_MP$ that we computed before.
+Here are the multisets $A_M$ and $P_M$ that we computed before.
 $$
 \begin{array}{rl}
-    _MA & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
-    _MP & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
+    A_M & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
+    P_M & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
 \end{array}
 $$
 Their multiset sum is
 $$
 \begin{align*}
-    _MA \multisum _MP & = \setof{w_1: 9+0, w_2: 1+9, w_3: 4+5, w_4: 0+3}\\
+    A_M \multisum P_M & = \setof{w_1: 9+0, w_2: 1+9, w_3: 4+5, w_4: 0+3}\\
                       & = \setof{w_1: 9, w_2: 10, w_3: 9, w_4: 3}\\
 \end{align*}
 $$
@@ -213,34 +213,34 @@ Calculate the multiset sum of the two multisets you constructed for *ethics* and
 \end{exercise}
 
 While multiset sum offers an easy way to convert the multisets produced according to the query into a single score for each website, it is also a bit too simplistic.
-Multiset sum is *commutative*, which means that the order of arguments does not matter: $_MA \multisum _MP = _MP \multisum _MA$.
+Multiset sum is *commutative*, which means that the order of arguments does not matter: $A_M \multisum P_M = P_M \multisum A_M$.
 But the same arguably isn't true for the order of unigrams in a search query.
 The fact that the student typed *Aristotle metaphysics* rather than *metaphysics Aristotle* suggests that *Aristotle* may be more important. 
-In line with this interpretation we can use **scalar multiplication** to assign $_MA$ a greater weight relative to $_MP$.
+In line with this interpretation we can use **scalar multiplication** to assign $A_M$ a greater weight relative to $P_M$.
 
 \begin{example}
-The values of $_MP$ and $_MP$ are listed here once more for the sake of easier reference:
+The values of $A_M$ and $P_M$ are listed here once more for the sake of easier reference:
 $$
 \begin{array}{rl}
-    _MA & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
-    _MP & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
+    A_M & \is \setof{w_1: 9, w_2: 1, w_3: 4, w_4: 0}\\
+    P_M & \is \setof{w_1: 0, w_2: 9, w_3: 5, w_4: 3}\\
 \end{array}
 $$
-Suppose that $_MA$ should be about 50% more important than $_MP$.
-We can express this by multiplying $_MA$ by $3$ and $_MP$ by $2$.
-Since $\frac{3}{2} = 1.5$, this assigns $_MA$ a 50% higher weight than $_MP$.
+Suppose that $A_M$ should be about 50% more important than $P_M$.
+We can express this by multiplying $A_M$ by $3$ and $P_M$ by $2$.
+Since $\frac{3}{2} = 1.5$, this assigns $A_M$ a 50% higher weight than $P_M$.
 $$
 \begin{align*}
-    3 \multimult _MA &= \setof{w_1: 3 \mult 9, w_2: 3 \mult 1, w_3: 3 \mult 4, w_4: 3 \mult 0}\\
+    3 \multimult A_M &= \setof{w_1: 3 \mult 9, w_2: 3 \mult 1, w_3: 3 \mult 4, w_4: 3 \mult 0}\\
                      &= \setof{w_1: 27, w_2: 3, w_3: 12, w_4: 0}\\
-    2 \multimult _MP &= \setof{w_1: 2 \mult 0, w_2: 2 \mult 9, w_3: 2 \mult 5, w_4: 2 \mult 3}\\
+    2 \multimult P_M &= \setof{w_1: 2 \mult 0, w_2: 2 \mult 9, w_3: 2 \mult 5, w_4: 2 \mult 3}\\
                      &= \setof{w_1: 0, w_2: 18, w_3: 10, w_4: 6}\\
 \end{align*}
 $$
 As before, we combine the two multisets via multiset sum.
 $$
 \begin{align*}
-    3 \multimult _MA \multisum 2 \multimult _MP &= \setof{w_1: 27 \multisum 0, w_2: 3 \multisum 18, w_3: 12 \multisum 10, w_4: 0 \multisum 6}\\
+    3 \multimult A_M \multisum 2 \multimult P_M &= \setof{w_1: 27 \multisum 0, w_2: 3 \multisum 18, w_3: 12 \multisum 10, w_4: 0 \multisum 6}\\
                                         &= \setof{w_1: 27, w_2: 21, w_3: 22, w_4: 6}\\
 \end{align*}
 $$
