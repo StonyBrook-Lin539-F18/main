@@ -40,7 +40,7 @@ We say that $y$ is an **adjunct extension** of $x$ iff $x \leq y$.
 
 \begin{exercise}
 Fill the gaps with $\leq_A$ or $\geq_A$ as appropriate.
-If neither $\leq_A$ nor $\geq_A$ hold. leave the gap empty.
+If neither $\leq_A$ nor $\geq_A$ hold, leave the gap empty.
 
 <ol>
 <li>John slept \_ John definitely slept yesterday</li>
@@ -118,7 +118,7 @@ Before moving on, let us consider the structure of $\tuple{L, \leq_A}$ in more d
 This is not essential for the general argument, but with such abstract structures it always helps to study their shape more carefully. 
 
 For any string $s \in L$, we can restrict $\tuple{L, \leq_A}$ to just those strings that are adjunct extensions of $s$.
-We denotes this set by $A_L(s)$.
+We denote this set by $A_L(s)$.
 
 \begin{example}
 Let $s$ be the string *John really likes Mary*.
@@ -142,8 +142,8 @@ The meet of *John snored* and *John slept* is not defined as there is no string 
 
 The counterpart of a meet semilattice is a **join semilattice**.
 The join, **supremum**, or **least upper bound** (lub) of $a$ and $b$ is $a \vee b$.
-Join is defined analogously to meet: $c = a \vee b$ iff $c \geq a$ and $c \geq b$ and for every $d$ with $d \leq a$ and $d \leq b$, it holds that $d \leq c$.
-A poset $\tuple{P, \leq}$ is a join semilattice iff it holds for all $a,b \in P$ that $a \vee b \in P$.
+Join is defined analogously to meet: $c = a \vee b$ iff $c \geq a$ and $c \geq b$ and for every $d$ with $d \geq a$ and $d \geq b$, it holds that $d \geq c$.
+A poset $\tuple{P, \geq}$ is a join semilattice iff it holds for all $a,b \in P$ that $a \vee b \in P$.
 
 Note that $\tuple{A_L(s), \leq_A}$ is not a join semilattice.
 In general, the lub of two strings in $A(s)$ is not well-defined.
@@ -179,7 +179,7 @@ Suppose $L$ contains the following strings:
 </ul>
 
 Assume furthermore that $A$ only contains *loudly*, *definitely*, and *yesterday*.
-Draw the semilattice $\tuple{A_L(\text{John snored loudly}}$ (feel free to truncate the words to their first letter: *J*, *s*, *l*, *d*, and *y*).
+Draw the semilattice $\tuple{A_L(\text{John snored loudly})}$ (feel free to truncate the words to their first letter: *J*, *s*, *l*, *d*, and *y*).
 Then compute all of the following for this semilattice:
 
 <ol>
@@ -207,7 +207,7 @@ The poset $\tuple{L, \leq_A}$ is the archipelago that consists of all these isla
 ## Optionality and well-formedness entailments
 
 All the math so far has served the purpose of identifying relations between sentences.
-We represent sentences $s$ and $t$ as strings of words and say that if $t$ can be obtained from $s$ by adding finitely many adjuncts, then $t$ is an adjunct extension of $t$.
+We represent sentences $s$ and $t$ as strings of words and say that if $t$ can be obtained from $s$ by adding finitely many adjuncts, then $t$ is an adjunct extension of $s$.
 This turns a language from a set into a poset whose structure encodes how strings are related with respect to adjuncts.
 
 Adjuncts have a crucial property: they are optional.
