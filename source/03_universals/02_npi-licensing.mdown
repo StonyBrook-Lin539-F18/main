@@ -174,4 +174,4 @@ Construct an example for downard entailment similar to the one above for upward 
 
 As you can see, monotonicity isn't limited to morphological paradigms.
 Without mathematics, it wouldn't be obvious that the No-Crossing constraint of phonology has anything to do with the $^*$ABA generalization or the distribution of *ever*.
-The abstract notion of monotonicity allows us to tie them all together.
+The abstract notion of monotonicity allows us to tie them all together. 
