@@ -300,7 +300,7 @@ Here it seems like the phrase *this book* was originally both the object of the 
 Such parasitic gap constructions are allowed in English, but not in certain other languages like German.
 This is pretty much what we expect in our system.
 Removing the adjunct phrase *without reading* leaves the sentence *this book, John reviewed*, which is well-formed.
-Since the well-formedness of $u$ does not tell us anything about the well-formedness of any adjunct extension $v$ of $u$, $v$ may be well-formed or not, it depends on the language at hand.
+Since the well-formedness of $s$ does not tell us anything about the well-formedness of any adjunct extension $t$ of $s$, $t$ may be well-formed or not, it depends on the language at hand.
 
 To sum up, we have subsumed yet another phenomenon under the umbrella of a monotonicity requirement over linguistic structures.
 In fact, two phenomena have been captured: monotonicity rigorously enforces the AIC, but it still allows languages to exempt certain constructions such as adjuncts with parasitic gaps.
