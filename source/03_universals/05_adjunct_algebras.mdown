@@ -259,12 +259,12 @@ Hence it holds for all $s$ and $t$ with $s \leq_A t$ that $f(t) \leq_2 f(s)$.
 This is a kind of monotonicity known as antitonicity, or inverse order preservation.
 If we switch the order in **2** so that $T \leq_2 F$, we get our standard notion of order preservation instead.
 
-The fact that the well-formedness mapping for $\tuple{L, \leq_A}$$ is monotonic guarantees that we can mechanically calculate well-formedness for certain sentences.
+The fact that the well-formedness mapping for $\tuple{L, \leq_A}$ is monotonic guarantees that we can mechanically calculate well-formedness for certain sentences.
 This is the key to solving the AIC.
 
 ## Explaining the Adjunct Island Constraint
 
-Syntactician have known for a long time that adjuncts are more finicky than arguments in certain respects.
+Syntacticians have known for a long time that adjuncts are more finicky than arguments in certain respects.
 Arguments are usually fine with having parts of them moved to a different position in the sentence.
 
 1. John invited the supervisor of this girl.
