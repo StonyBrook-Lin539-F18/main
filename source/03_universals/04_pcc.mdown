@@ -17,7 +17,7 @@ In these dialects, it is alright to combine
 
 but not
 
-- a **first** person direct object pronoun with a **first** person indirect object pronoun.
+- a **first** person direct object pronoun with a **third** person indirect object pronoun.
 
 A variety of PCCs have been found across languages.
 Four PCCs are robustly attested at this point.
@@ -26,7 +26,7 @@ Using 1/2/3 as a shorthand for first/second/third person and DO/IO as abbreviati
 1. **S(trong)-PCC:** DO must be 3.
 1. **U(ltrastrong)-PCC:** DO is strictly less prominent than IO, where 3 is less prominent than 2, and 2 is less prominent than 1.
 1. **W(eak)-PCC:** 3IO combines only with 3DO.
-1. **M(e first)-PCC** If IO is 2 or 3, then DO is not 1.
+1. **M(e first)-PCC:** If IO is 2 or 3, then DO is not 1.
 
 That is, to be frank, a mess.
 The attested PCCs look like a random collection of conditions, if there is anything principled going on it must be well-hidden.
@@ -205,7 +205,7 @@ This suggests a somewhat counterintuitive fix: use the reversed person hierarchy
 Given an ordering relation $R$, its **inverse** $\inv{R}$ is the set $\setof{ \tuple{b,a} \mid \tuple{a,b} \in R }$.
 So we literally reverse the order.
 The reverse of $1 < 2 < 3$ is $3 < 2 < 1$.
-Let us $\prec$ for this reversed order to clearly separate it from $<$.
+Let us use $\prec$ for this reversed order to clearly separate it from $<$.
 Then we have $1 < 2 < 3$ but $3 \prec 2 \prec 1$.
 We will also use $\triangleleft$ for the order in the person-person hierarchy, just to keep the three relations visually separated.
 In the pointwise definition, we now use $<$ for the first component and $\prec$ for the second.
