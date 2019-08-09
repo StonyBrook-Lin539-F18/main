@@ -16,7 +16,7 @@ Consider the **identity function** $\mathrm{id}$, which connects every node to i
 We can view this function as a relation that connects each node to itself and nothing else.
 This is a weak partial order.
 It clearly satisfies reflexivity.
-Transitivity holds because $a \mathrel{R} b$ and $b \mathrel c$ hold only if $a = b = c$, wherefore $a \mathrel{R} c$ is the same as $a \mathrel{R} a$, which is guranteed by reflexivity.
+Transitivity holds because $a \mathrel{R} b$ and $b \mathrel{R} c$ hold only if $a = b = c$, wherefore $a \mathrel{R} c$ is the same as $a \mathrel{R} a$, which is guranteed by reflexivity.
 Antisymmetry holds for the same rason: $a \mathrel{R} b$ holds only if $a = b$, so it is trivially true that $a \mathrel{R} b$ and $b \mathrel{R} a$ implies $a = b$.
 \end{example}
 
@@ -27,7 +27,7 @@ Our task, then, is to identify a proper subclass of weak partial orders that mor
 ## A first attempt: Lattices
 
 All the four structures above are lattices.
-Remember, a partially ordered set $S$ is a lattice iff it is both meet semilattice and a join semilattice.
+Remember, a partially ordered set $S$ is a lattice iff it is both a meet semilattice and a join semilattice.
 In other words, for all $x, y \in S$ it holds that there is a greatest lower bound $x \wedge y$ and a least upper bound $x \vee y$.
 
 \begin{exercise}
@@ -68,19 +68,19 @@ So it isn't too surprising that the GCC is a monotonic map given a gender hierar
 Show that the Zapotec GCC is monotonic over this hierarchy.
 \end{exercise}
 
-So it looks like we might be able narrow down the class of potential hierarchies from any weak partial order to lattices.
+So it looks like we might be able to narrow down the class of potential hierarchies from any weak partial order to lattices.
 That's a significant reduction.
 Unfortunately, the class of lattices is too restrictive.
 
 ## Lattices are too specific: Evidence from tense
 
 Some hierarchies do not form lattices.
-One case where one case see this is with verbal tense.
-Consider the English tenes paradigm \emph{go}-\emph{went}-\emph{gone}.
+One case where one can see this is with verbal tense.
+Consider the English tenes paradigm **go-went-gone**.
 This looks like an ABA pattern.
 But suppose that we use the order $\text{past} < \text{participle} < \text{present}$.
 This is intuitively plausible since past events occur before present events, whereas the participle is usually used for the simple perfect, which describes events that aren't quite as distant as those described by simple past.
-With this ordering, \emph{go}-\emph{went}-\emph{gone} is actually \emph{went}-\emph{gone}-\emph{go}.
+With this ordering, **go-went-gone** is actually **went-gone-go**.
 The $^*$ABA-violation has disappeared.
 And given this ordering of verbal forms, no ABA violations are attested at all.
 
