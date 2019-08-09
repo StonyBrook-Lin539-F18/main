@@ -5,7 +5,7 @@
 # Connectedness of graphs
 
 Graphs can have varying degrees of connectivity.
-Connectedness measures the degree to which every node in the graph is reachable from some other graph.
+Connectedness measures the degree to which every node in the graph is reachable from some other node.
 
 A **disconnected** graph is one where there are nodes $a$ and $b$ such that even if one ignores the direction of the edge relation, one cannot get from $a$ to $b$.
 So if we were to construct the graph in the real world as a kind of mobile, we would not be able to hang the graph on the wall with a single hook because not all parts hang together --- at least one part would fall to the ground.
@@ -62,7 +62,7 @@ However, $6$ and $9$ are still reachable from each other if we consider the refl
 Therefore, the graph is weakly connected.
 \end{example}
 
-Intuitively, the three degrees of connectivity can be described in terms of how we have to move along the arrows in a graph to read one node from another one:
+Intuitively, the three degrees of connectivity can be described in terms of how we have to move along the arrows in a graph to reach one node from another one:
 
 - If we can reach every node from every node by following a sequence of arrows, the graph is strongly connected.
 - If we can reach $a$ from $b$ by following a sequence of arrows, but not necessarily $b$ from $a$, the graph is connected.
@@ -75,5 +75,5 @@ Justify your answer.
 
 \begin{exercise}
 Suppose that a graph $G$ is weakly connected.
-Is is guaranteed to be connected if we take the reflexive, symmetric, transitive closure of the edge relation?
+Is it guaranteed to be connected if we take the reflexive, symmetric, transitive closure of the edge relation?
 \end{exercise}
