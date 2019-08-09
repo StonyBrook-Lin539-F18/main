@@ -43,7 +43,7 @@ We refer to this resulting structure as $\mathbb{G} \is \tuple{\mathcal{G}, \sub
 
 \begin{example}
 Suppose $n = 2$ and our alphabet $\Sigma$ contains only $a$.
-One we add the edge marker, there are 16 distinct bigram grammars over $\Sigma_\$$.
+Once we add the edge marker, there are 16 distinct bigram grammars over $\Sigma_\$$.
 
 <ol>
 <li>$\emptyset$</li>
@@ -70,8 +70,8 @@ Ordering these sets by the subset relation $\subseteq$ yield the following struc
 \end{example}
 
 The structure in the above example is rather special.
-For any two grammars $G_1$ and $G_2$, there is a unique smallest grammar $G_\vee$ such that $G_1, G_2 \subseteq G_\vee$.
-Similarly, there's also a unique largest grammar $G_\wedge$ such that $G_1, _G@ \subseteq G_\wedge$.
+For any two grammars $G_1$ and $G_2$, there is a unique smallest grammar $G_\vee$ such that $G_\vee \subseteq G_1, G_2$.
+Similarly, there's also a unique largest grammar $G_\wedge$ such that $G_1, G_2 \subseteq G_\wedge$.
 In other words, $\mathcal{G}$ is both a meet semilattice and a join semilattice.
 This makes $\mathbb{G}$ a **lattice**.
 
