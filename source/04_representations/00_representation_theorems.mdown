@@ -5,12 +5,12 @@ The apparent differences between the phenomena are due to differences in the str
 
 - the person hierarchy ($1 < 2 < 3$),
 - the adjectival gradation hierarchy ($\text{positive} < \text{comparative} < \text{superlative}$),
-- the (partially ordered ) case hierarchy,
+- the (partially ordered) case hierarchy,
 - the person-person hierarchy for the PCC,
 - the adjunct extension semilattices for the Adjunct Island Constraint.
 
-What we have done, then, is given each empirical domain a specific **representation**.
-A representation is a structure that expresses crucial properties of the object is represents.
+What we have done, then, is giving each empirical domain a specific **representation**.
+A representation is a structure that expresses crucial properties of the object it represents.
 Mathematically, we are free to choose our representations any way we want.
 In fact, there are **representation theorems** that establish how, sometimes, one representation can be transferred into another representation without losing any essential properties.
 
