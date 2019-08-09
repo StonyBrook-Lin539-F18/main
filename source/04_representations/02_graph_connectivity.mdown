@@ -39,7 +39,7 @@ Remember that we originally had the class of semilattices as a feasible candidat
 \input_mid{./stem_allomorphy.tikz}
 
 Graph-theory provides a way around this by revealing hidden lattice structure in this figure.
-The strongly connected components of a graph are those parts where the vertices so tightly connected by the edge relation that they are mutually reachable.
+The strongly connected components of a graph are those parts where the vertices are so tightly connected by the edge relation that they are mutually reachable.
 Within a strongly connected component, one can move from any vertex to any other vertex in the same component.
 
 For example, the graph below consists of three strongly connected components, which are indicated by dashed rectangles.
