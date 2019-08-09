@@ -129,7 +129,7 @@ Why can't we generalize the tense semilattice to a lattice by also setting $\tex
 
 The counterexample to semilattices again comes from case.
 However, this time it isn't about case syncretism but noun stem allomorphy.
-Noun stem allomorphy refers to the facts that case may not only be reflected in the choice of suffix, but also in the form of the stem.
+Noun stem allomorphy refers to the fact that case may not only be reflected in the choice of suffix, but also in the form of the stem.
 This is shown below for Latin *rex*, which means *king*.
 
 | Case | Singular | Plural   | 
@@ -166,7 +166,7 @@ Explain why.
 \end{exercise}
 
 The hierarchy above allows for the two attested noun stem allmorphy patterns, and nothing else.
-So it provides a very tight characterization of this phenomeon.
+So it provides a very tight characterization of this phenomenon.
 But the hierarchy is not a semilattice, let alone a lattice.
 In fact, it isn't even a weak partial order, so it can't be a semilattice, either, as this is a special kind of partially ordered set.
 
@@ -181,9 +181,9 @@ Instead, it is a **preorder** (also called a **quasi-order**).
 
 Our quest to find a more restrictive characterization for linguistic hierarchies has turned pretty dire all of a sudden.
 If some hierarchies aren't even weak partial orders, then they cannot be semilattices or lattices either.
-Remember, a semilattices and lattices are special cases of partially ordered sets, i.e. sets with a weak partial order defined over them.
+Remember, semilattices and lattices are special cases of partially ordered sets, i.e. sets with a weak partial order defined over them.
 The class of preorders is even bigger than the class of weak partial orders.
 Despite our best intentions, things have become less restrictive.
 Do not despair, though.
-The next notebook shows a way of out of this malaise.
+The next notebook shows a way out of this malaise.
 It requires a shift in perspective, though, as it relies on graphs instead of orders.
