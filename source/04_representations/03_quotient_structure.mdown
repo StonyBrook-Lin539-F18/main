@@ -38,6 +38,6 @@ This hierarchy did not work as desired for the PCC, and we were forced to modify
 \input_mid{./pcc_hierarchy_right_reduced.tikz}
 
 Intuitively, the latter is much less appealing than the former.
-But our new understanding of what linguistic hierarchies reveals that the former is not a licit hierarchy to begin with.
+But our new understanding of what linguistic hierarchies reveal is that the former is not a licit hierarchy to begin with.
 Explain why!
 \end{exercise}
