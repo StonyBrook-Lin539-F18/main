@@ -21,7 +21,7 @@ The idea is that the function maps each position of the tuple/string to the symb
 The string *aaba* can be regarded as a function $f$ with $0 \mapsto a$, $1 \mapsto a$, $2 \mapsto b$, $3 \mapsto a$.
 \end{example}
 
-So each string/tuple can be regarded as function whose domain is an initial subset of the natural numbers (so a set that starts with 0 and doesn't skip any numbers).
+So each string/tuple can be regarded as a function whose domain is an initial subset of the natural numbers (so a set that starts with 0 and doesn't skip any numbers).
 The co-domain of the function depends on the chosen alphabet.
 
 \begin{exercise}
@@ -35,7 +35,7 @@ Define the corresponding functions (with suitable domains and co-domains) for th
 \end{exercise}
 
 \begin{exercise}
-Assume that $g$ is a function with domain $\setof{0, 1, 2, \ldots, 7}$ such that $g$ maps to $x$ to $a$ if $x$ is odd and at least 5.
+Assume that $g$ is a function with domain $\setof{0, 1, 2, \ldots, 7}$ such that $g$ maps $x$ to $a$ if $x$ is odd and at least 5.
 In all other cases, $x$ is mapped to $b$.
 What is the string defined by $g$?
 \end{exercise}
@@ -45,7 +45,7 @@ By downward-closed we mean that for every $y \in D$ and $x < y$, it must be the 
 So $4 \in D$ implies $3 \in D$, $2 \in D$, $1 \in D$, and $0 \in D$.
 
 \begin{example}
-The set $S \is \setof{0,1,2,4,5}$ is not downward closed because $4 \in S$ and $3 < 4$, yet $3 \notin S$.
+The set $S \is \setof{0,1,2,4,5}$ is not downward-closed because $4 \in S$ and $3 < 4$, yet $3 \notin S$.
 \end{example}
 
 \begin{exercise}
@@ -135,7 +135,7 @@ Annotate each node in the tree below with its Gorn address.
 \input_mid{./tree_exercise.forest}
 \end{exercise}
 
-With Gorn addresses, is it very easy to define trees.
+With Gorn addresses, it is very easy to define trees.
 
 \begin{definition}
 A **$\Sigma$-labeled Gorn tree domain** (or simply *$\Sigma$-tree*) is a pair $\tuple{D, \ell}$, where $D \subseteq \mathbb{N}^*$ is the set of nodes in the tree and  $\ell: D \rightarrow \Sigma$ is a (total) labeling function.
