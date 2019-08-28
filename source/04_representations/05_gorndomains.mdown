@@ -177,7 +177,7 @@ And here is its counterpart with Gorn addresses:
 \input_mid{./tree_psg_gorn.forest}
 
 The node at address $10$ labeled VP is the parent of V and NP at address $100$ and $101$, respectively.
-This VP node is the daughter of node the node at address $1$, which is also labeled VP.
+This VP node is the daughter of the node at address $1$, which is also labeled VP.
 \end{example}
 
 The "node above you" analogy is not a formal definition of course, it's just a convention for how we draw those trees.
@@ -406,13 +406,13 @@ But by assumption this implies that every permutation of $u$ is also well-formed
 This contradicts the initial claim that $t$ is ill-formed, which shows that there can be no such precedence requirement $P$.
 
 So if you allow all possible orders, you can still have ordered trees without being able to discriminate between trees based on their precedence relations.
-This makes it possible for linguists to have their cake and eat it too: we get a computationally and mathematically better behaved data structure without running into the question why precedence does not seem to matter much in syntax (according to at least some syntacticians, that is).
+This makes it possible for linguists to have their cake and eat it too: we get a computationally and mathematically better behaved data structure without running into the question of why precedence does not seem to matter much in syntax (according to at least some syntacticians, it does).
 
 
 ## C-Command
 
 C-command has been the most important relation in syntax for many decades.
-It's importance has decreased somewhat in recent years, but it is still noteworthy for being a genuinely linguistic notion.
+Its importance has decreased somewhat in recent years, but it is still noteworthy for being a genuinely linguistic notion.
 Whereas the relations we discussed so far are also useful in computer science, c-command is a purely linguistic notion.
 Intuitively, a node c-commands everything its sisters reflexively dominate.
 If a node has no sisters, then it c-commands whatever its mother c-commands.
