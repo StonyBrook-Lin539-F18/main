@@ -26,7 +26,7 @@
     \node (ee-aa) [above=3.5em of ea.center, anchor=center,
                    draw=blue!75, dashdotted]  {$\setof{\$\$, aa}$};
     \node (ea-ae) [above=3.5em of ae.center, anchor=center,
-                   draw=brown!75, dashdotted, circle, inner sep=0]  {$\setof{\$a, \$a}$};
+                   draw=brown!75, dashdotted, circle, inner sep=0]  {$\setof{\$a, a\$}$};
     \node (ea-aa) [above=3.5em of aa.center, anchor=center,
                    draw=red!75, dotted]  {$\setof{\$a, aa}$};
     \node (ae-aa) [above right=3.5em and 6em of aa.center, anchor=center,

@@ -37,13 +37,13 @@ For the same reason, transitivity must hold, too: $x = y$ and $y = z$ can be the
 \begin{example}
 A more interesting example is equivalence modulo $2$.
 The modulo $n$ operation divdies a number by $n$ and returns the remainder.
-For example, $5 \mod 2 = 1$, whereas $6 \mod 2 = 0$.
+For example, $5 mod 2 = 1$, whereas $6 mod 2 = 0$.
 
 <br>
-Suppose $x \equiv_2 y$ iff $x \mod 2 = y \mod 2$.
+Suppose $x \equiv_2 y$ iff $x mod 2 = y mod 2$.
 Then $\equiv_2$ is an equivalence relation.
-First, it is clearly refleixve: $x \equiv_2 x$ iff $x \mod 2 = x \mod 2$, which always holds.
-NExt, symmetry is also satisfied: $x \equiv_2 y$ iff $x \mod 2 = y \mod 2$ iff $y \mod 2 = x \mod 2$ iff $y \equiv_2 x$.
+First, it is clearly refleixve: $x \equiv_2 x$ iff $x mod 2 = x mod 2$, which always holds.
+Next, symmetry is also satisfied: $x \equiv_2 y$ iff $x mod 2 = y mod 2$ iff $y mod 2 = x mod 2$ iff $y \equiv_2 x$.
 \end{example}
 
 \begin{exercise}
@@ -52,7 +52,7 @@ Explain why $\equiv_2$ is transitive.
 
 \begin{exercise}
 A person's family pain is the number of family members that they'd rather not be related to.
-Given some domain $D$ of individuals, let $R \is \setof{ \tuple{d,e} \mid d \text{ and } e \text{ suffer the same familiy pain} }$.
+Given some domain $D$ of individuals, let $R \is \setof{ \tuple{d,e} \mid d \text{ and } e \text{ suffer the same family pain} }$.
 Show that $R$ is an equivalence relation.
 \end{exercise}
 
@@ -83,12 +83,12 @@ Keep in mind that $R$ is reflexive, so $x \in [x]$.
 
 Also, symmetry and transitivity entail that $x \in [y]$ iff $y \in [x]$.
 So it follows from $x \in [y]$ that $[x] = [y]$.
-Hence it doesn't matter which member of an equivalence class one uses in its name, there is no difference between $[x]$ and $[y]$ if $x$ and $y$ belong go the same equivalence class.
+Hence it doesn't matter which member of an equivalence class one uses in its name, there is no difference between $[x]$ and $[y]$ if $x$ and $y$ belong to the same equivalence class.
 
 \begin{example}
 Consider again the modulo 2 relation $\equiv_2$.
 It gives rise to two equivalence classes.
-The first ist $[0] \is \setof{0, 2, 4, 6, \ldots}$, which contains all even numbers, and the other is $[1] \is \setof{1, 3, 5, 7, \ldots}$, the set of odd numbers.
+The first is $[0] \is \setof{0, 2, 4, 6, \ldots}$, which contains all even numbers, and the other is $[1] \is \setof{1, 3, 5, 7, \ldots}$, the set of odd numbers.
 \end{example}
 
 \begin{exercise}
@@ -126,10 +126,10 @@ It may be possible to lift this operation or relation from $S$ to its quotient s
 In this case, one obtains a **quotient structure**.
 
 \begin{example}
-Consider once more the $\mod 2$ equivalence relation.
+Consider once more the $mod 2$ equivalence relation.
 Over the natural numbers, it induces a quotient set consisting of $[0]$ and $[1]$, the even and odd numbers, respectively.
 Now suppose that we add addition as an operation to the natural numbers.
-Then it holds that $(m + n) \mod 2 = ([m] + [n]) \mod 2$.
+Then it holds that $(m + n) mod 2 = ([m] + [n]) mod 2$.
 In other words, there are two different ways of computing the desired result.
 The first option operates on $S$.
 One adds the two numbers and then takes the sum modulo 2.
@@ -139,7 +139,7 @@ Then apply modulo 2 as before.
 
 <br>
 Here's what this looks like with specific numbers.
-Suppose you want to calculate $(10,222 + 13,728,529) \mod 2$.
+Suppose you want to calculate $(10,222 + 13,728,529) mod 2$.
 You could add this up to $13,738,751$, divide by two, and get a remainder of $1$.
 But you probably realized right away that the first number is even and the second one odd, so their sum will be odd, which means that division by 2 will leave a remainder of $1$.
 In other words, you have computed the result with the quotient structure.
@@ -150,4 +150,4 @@ As $[0] + [1] = 0 + 1 = 1$, you immediately get a remainder of $1$.
 Quotient structures are a very powerful concept, in particular when it comes to designing efficient algorithms.
 A set may contain millions of elements, and the operations on the set may take a long time to compute on some of those elements.
 But you might be able to build a much smaller quotient structure, and the operations may be faster over equivalence classes because you can pick very simple representatives of each class.
-After all, $(3 + 5) \mod 7$ is a much easier way to calculate the output of $(7,003 + 14,726) \mod 7$.
+After all, $(3 + 5) mod 7$ is a much easier way to calculate the output of $(7,003 + 14,726) mod 7$.

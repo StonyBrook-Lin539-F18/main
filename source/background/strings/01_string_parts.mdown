@@ -27,14 +27,14 @@ Note that
 1. the empty string is a substring of every string, and
 2. every string is a substring of itself.
 
-A substring $u$ of $v$ is **proper* iff $u \neq v$.
+A substring $u$ of $v$ is **proper** iff $u \neq v$.
 
 \begin{example}
 All the strings listed above are proper substrings of $\String{abcd}$, except $\String{abcd}$ itself.
 \end{example}
 
 \begin{exercise}
-For each one of the gaps below, enter $\sqsubseteq$, $\sqsubsetneq$, or $\not\sqsubseteq$ depending on whether the first string is a substring of the second string, a proper substring, or neither:
+For each one of the gaps below, enter $\sqsubseteq$, $\sqsubset$, or $\not\sqsubseteq$ depending on whether the first string is a substring of the second string, a proper substring, or neither:
 
 <ol>
 <li>$\String{a} \_ \String{aaaa}$</li>
@@ -69,6 +69,7 @@ The string $\String{abcd}$ has subsequences:
 <li>$\String{abc}$</li>
 <li>$\String{abd}$</li>
 <li>$\String{bcd}$</li>
+<li>$\String{acd}$</li>
 <li>$\String{abcd}$</li>
 </ol>
 
@@ -78,7 +79,7 @@ Note that $\String{ca}$ is not a subsequence of $\String{abcd}$, but it is a sub
 Just like substrings, a subsequence $u$ of $v$ is proper iff $u \neq v$.
 
 \begin{exercise}
-For each one of the gaps below, enter $\sqsubseteq$, $\sqsubsetneq$, or $\not\sqsubseteq$ depending on whether the first string is a subsequence of the second string, a proper subsequence, or neither:
+For each one of the gaps below, enter $\sqsubseteq$, $\sqsubset$, or $\not\sqsubseteq$ depending on whether the first string is a subsequence of the second string, a proper subsequence, or neither:
 
 <ol>
 <li>$\String{a} \_ \String{aaaa}$</li>

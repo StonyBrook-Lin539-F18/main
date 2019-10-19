@@ -16,7 +16,7 @@ $$
 \end{example}
 
 But when we want to allow all possible combinations, there is an easier option.
-Consider the colored object depicted below:
+Consider the colored objects depicted below:
 
 \input_mid{./shapes.tikz}
 
@@ -56,7 +56,7 @@ This is different from $C \times S$, which contains
 \end{example}
 
 \begin{exercise}
-Suppose $S$ consists of \emph{John}, \emph{Mary}, and \emph{the old man}, whereas $V$ contains only *slept* and *left*.
+Suppose $S$ consists of **John**, **Mary**, and **the old man**, whereas $V$ contains only *slept* and *left*.
 Compute $S \times V$.
 \end{exercise}
 

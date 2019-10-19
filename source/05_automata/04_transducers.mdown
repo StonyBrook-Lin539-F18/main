@@ -35,7 +35,7 @@ It gradually transforms $acbbaa$ one symbol after the other:
 <li>$bc\mathbf{b}baa$</li>
 <li>$bcb\mathbf{b}aa$</li>
 <li>$bcbb\mathbf{b}a$</li>
-<li>$bcbba\mathbf{b}$</li>
+<li>$bcbbb\mathbf{b}$</li>
 </ol>
 \end{example}
 
@@ -72,7 +72,7 @@ With FSTs, this is not the case: some transductions can only be defined by FSTs 
 Suppose an FSA contains an $\emptystring$-arc from state $q_1$ to state $q_2$.
 Assume furthermore that $q_2$ only has an $a$-arc to $q_3$.
 Then one can also add an $a$-arc between $q_1$ and $q_3$.
-One every outgoing arc from $q_2$ has a counterpart leaving $q_1$, the $\emptystring$-arc between $q_1$ and $q_2$ becomes redundant and can be removed.
+Once every outgoing arc from $q_2$ has a counterpart leaving $q_1$, the $\emptystring$-arc between $q_1$ and $q_2$ becomes redundant and can be removed.
 
 <br>
 This is exemplified below.
@@ -138,7 +138,7 @@ One can easily construct a transducer for the composition of two FSTs by modifyi
 
 \begin{example}
 Consider the two FSTs below.
-The first one rewrites each $a$ as $b$, whereas the second one rewrites ever other $b$ as $c$.
+The first one rewrites each $a$ as $b$, whereas the second one rewrites every other $b$ as $c$.
 
 \input_small{./fst_a2b.tikz}
 
@@ -156,7 +156,7 @@ What is the output of $bacab$ if one applies the second transducer before the fi
 \end{exercise}
 
 Here's the relevant steps for the construction.
-As with the intersection construction for FSA, each state is a pair that encodes which state the first and second transducer are in, respectively.
+As with the intersection construction for FSA, each state is a pair that encodes which state the first and second transducers are in, respectively.
 The major change is how states are connected by arcs, and how these arcs are labeled.
 
 Suppose the current state is $\tuple{0,1}$ and we want to add an arc for the input symbol $a$.
@@ -233,7 +233,7 @@ But this argument only works if the FST is not restricted by what inputs we feed
 Let $\tau$ be the FST that maps every string to itself.
 Dropping the input components shows that the FST generates $\Sigma^*$.
 But now suppose that we only take input strings from $a^n b^n$.
-Since $\tau$ maps every string to itself, the output language is $a^n b^b \neq \Sigma^*$.
+Since $\tau$ maps every string to itself, the output language is $a^n b^n \neq \Sigma^*$.
 We already know from the Myhill-Nerode theorem that $a^n b^n$ is not regular.
 \end{example}
 
@@ -261,7 +261,7 @@ Describe how one can construct an FST for $\setof{ \tuple{s,s} \mid s \in L}$ as
 ## Closure under inverse
 
 FSTs enjoy one more property that is tremendously useful: the **inverse** of an FST is also an FST.
-So if we know that the mapping from inputs to outputs is a finite-state transduction, the corresponding mapping from outputs to inputs is to.
+So if we know that the mapping from inputs to outputs is a finite-state transduction, the corresponding mapping from outputs to inputs is too.
 All we have to do for this is switch the input and output components of the arc labels.
 
 \begin{example}

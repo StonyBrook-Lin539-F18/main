@@ -32,7 +32,7 @@ Both are final states, and thus the string is recognized.
 Based on this intuition, we construct an automaton where each state keeps track of the position of our fingers in these two automata.
 For the string above, we start out in $0,0$ and move to $1,1$ with an $a$ transition.
 After that a $b$ transition moves us to $2,2$, from which another $a$ gets us to $0,3$, and from there to $1,0$.
-For any two states $a,x$ and $b,y$, there is a $\sigma$-transition from $a,x$ to $b,y$ iff there is a $\sigma$-transition from $a$ to $b$ and in the first automaton and a $\sigma$-transition from $x$ to $y$ in the second automaton. 
+For any two states $a,x$ and $b,y$, there is a $\sigma$-transition from $a,x$ to $b,y$ iff there is a $\sigma$-transition from $a$ to $b$ in the first automaton and a $\sigma$-transition from $x$ to $y$ in the second automaton. 
 Furthermore, a state $a,x$ is initial iff both $a$ and $x$ are initial, and it is final iff both $a$ and $x$ are final.
 
 Applying this construction to the two automata above yields the following:
@@ -70,7 +70,7 @@ Automata for which this not the case are called **deterministic**.
 
 \begin{definition}
 An FSA $\tuple{V, E, c, \ell}$ is **non-deterministic** iff there are edges $\tuple{u,v}$ and $\tuple{u,w}$ such that $u \neq w$ and $\ell(\tuple{u,v}) \cap \ell(\tuple{u,w}) \neq \emptyset$.
-Otherwise it is **-deterministic**.
+Otherwise it is **deterministic**.
 \end{definition}
 
 \begin{example}
@@ -96,7 +96,7 @@ We could try $v$, and if we're lucky this is the correct path.
 But if we do not make it to a final state along this path, we have to backtrack to $u$ and try $w$ instead.
 Since each state may have many different choice points, recognition becomes much slower.
 If every state has at most $m$ choice points, recognition of a string of length $n$ can take up to $m^n$ steps.
-That is truly awful, with $m = 4$ and a short string of length $5$ this may already require $4^5 = (2^2)^5 = 2^10 = 1024$ steps instead of just $5$.
+That is truly awful, with $m = 4$ and a short string of length $5$ this may already require $4^5 = (2^2)^5 = 2^{10} = 1024$ steps instead of just $5$.
 
 An alternative to this kind of serial search is to do parallel search: whenever we reach a state with $m$ choices, we make $m$ copies of the automaton and each copy proceeds along of the possible paths.
 Now recognition can again proceed in real-time (modulo the cost of spawning copies of the automaton), but we consume a lot of memory.
@@ -111,10 +111,10 @@ Since all copies are exactly the same automaton, there is no point in maintainin
 Instead, states are chosen from $2^Q$.
 A state like $\setof{u}$ encodes that we only need one copy of the machine, which is in state $u$.
 If we then transition from $\setof{u}$ to $\setof{v,w}$, that is tantamount to saying "we had a single automaton in state $u$, and then we spawned a copy so that we now have one automaton in state $v$ and one in state $w$".
-And if we switch from $\setof{v,w}$ to $\setof{x}$, this means that both copies of the automato moved into state $x$ so we destroyed one of them because it had become redundant.
+And if we switch from $\setof{v,w}$ to $\setof{x}$, this means that both copies of the automaton moved into state $x$ so we destroyed one of them because it had become redundant.
 
 \begin{definition}
-Let $A \is \tuple{\Sigma, Q, I, F \Delta}$ be a non-deterministic FSA.
+Let $A \is \tuple{\Sigma, Q, I, F, \Delta}$ be a non-deterministic FSA.
 Then the *determinization* of $A$ is the FSA $\mathrm{Det}(A) \is \tuple{\Sigma, 2^Q, 2^I, F_D, \Delta_D}$ such that
 
 <ol>
@@ -126,7 +126,7 @@ Then the *determinization* of $A$ is the FSA $\mathrm{Det}(A) \is \tuple{\Sigma,
 When manually determinizing an FSA, it is best to follow this incremental procedure:
 
 - Construct a new set $I'$ of initial states that is the powerset of the automaton's original set $I$ of initial states.
-- Suppose you have a state $q \is \setof{q_1, \ldots, q_n$.
+- Suppose you have a state $q$ = {$q_1$, $\ldots$, $q_n$}.
   For every symbol $\sigma \in \Sigma$, do the following:
     - Look at $q_1$ and write down which states can be reached from $q_1$ via $\sigma$. 
     - Look at $q_2$ and write down which states can be reached from $q_2$ via $\sigma$.

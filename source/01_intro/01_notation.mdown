@@ -114,7 +114,7 @@ So the phrase "Let $S$ be a set containing two odd numbers" does not entail that
 Otherwise we would have written "Let $S$ be a set containing exactly two odd numbers, and nothing else".
 It is easy for the reader to miss something by assuming that the statement is more specific than it actually is.
 Another common pitfall is statements like "There is a node labeled $a$ such that all its children are labeled $b$", which would be satisfied even if $a$ has no children.
-The statement could instead be paraphrased as "There s a node labeled $a$, and if this node has any children, they are all labeled $b$".
+The statement could instead be paraphrased as "There's a node labeled $a$, and if this node has any children, they are all labeled $b$".
 When you see a statement or definition, always think about the simplest object that satisfies it, and ask yourself how much this object can change before it no longer fits the description.
 
 ### Questioning definitions
@@ -155,7 +155,7 @@ So don't worry about this and focus on the important insight here: whenever you 
 
 ### Implication and equivalence are not the same
 
-English, as all natural languages, is pretty sloppy in how it expressions conditions.
+English, as all natural languages, is pretty sloppy in how it expresses conditions.
 Consider the following lovely sentence: "If you don't give me your money, I will shoot you".
 Now the common understanding is that if you do hand over your money, you will not be shot.
 But if your robber happens to be a mathematician you are very unlucky because they might still shoot you --- while you draw your final breath they will gleefully point out that they didn't say "If you don't give me your money, I will shoot you, and if you give me your money I will not shoot you."

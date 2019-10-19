@@ -1,7 +1,7 @@
 # Functions: Basic notation
 
 **Functions**, also called **maps** or **mappings**, are ubiquitous in mathematics.
-The laymen usually thinks of things like $f(x) = x + 1$ when they hear the word *function*, but the concept is much more general.
+The laymen usually think of things like $f(x) = x + 1$ when they hear the word *function*, but the concept is much more general.
 
 ## Functions convert input arguments to an output
 

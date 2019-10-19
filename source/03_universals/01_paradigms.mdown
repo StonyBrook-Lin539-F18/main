@@ -23,7 +23,7 @@ Person | Singular form | Plural form
 3      | mag           | mögen
 
 You might think that paradigms can take any form you want.
-But that does not seem to be the case, some patterns simply do not arise
+But that does not seem to be the case, some patterns simply do not arise.
 There are certain principled gaps in the linguistic typology, like the holes in a Swiss cheese.
 The Swiss-cheese nature of language suggests that a substantive universal is at play.
 
@@ -91,7 +91,7 @@ Now contrast the figures above against the one below, which displays an ABA patt
 
 The ABA pattern is different from the others because the lines cross at some point.
 Linguists have noticed over the years that language in general does not like crossing lines.
-For instance, there is a theory known as *Autosegmental phonology*, which served as the inspiration for the TSL class of $n$-gram grammars.
+For instance, there is a theory known as *Autosegmental phonology*, which serves as the inspiration for the TSL class of $n$-gram grammars.
 In this theory, a sound in a word can occupy a position in the word as well as on a specific tier.
 This connection can be made explicit with an association line.
 But association lines are never allowed to cross.

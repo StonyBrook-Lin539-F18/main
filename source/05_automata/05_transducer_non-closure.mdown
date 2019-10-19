@@ -38,7 +38,7 @@ Deterministic FSTs compute functions (no input has more than one output), wherea
 The examples show that deterministic FSTs are much more limited than non-deterministic ones.
 Whenever one input has multiple outputs, one needs a non-deterministic transducer.
 For natural language, this mostly affects cases of optionality, such as whether *dream+PAST* should be *dreamed* or *dreamt*.
-But even when every input has at most one output, the transduction might still require a non-deterministic FSTs.
+But even when every input has at most one output, the transduction might still require a non-deterministic FST.
 This is usually the case when the transducer would have to make a decision based on a symbol that can be arbitrarily far to the right of the decision point.
 In these cases, non-determinism is needed to compensate for the lack of look-ahead.
 
@@ -52,13 +52,13 @@ Consider the following two finite-state transductions: one rewrites every $c^n$ 
 Their intersection rewrites every $c^n$ by $a^n b^n$.
 So the intersection maps the string language $c^*$ to the string language $a^n b^n$.
 But we already know from the Myhill-Nerode theorem that $a^n b^n$ is not regular.
-Howver, $c^*$ is clearly regulary, and finite-state transductions preserve regularity.
+However, $c^*$ is clearly regular, and finite-state transductions preserve regularity.
 So if $c^*$ is regular, but $a^n b^n$ is not, then the transduction that maps the former to the latter cannot be finite-state.
-But this transduction was the intersection of two finite-state transductions, which show that closure under intersection does not hold.
+But this transduction was the intersection of two finite-state transductions, which shows that closure under intersection does not hold.
 \end{example}
 
 \begin{exercise}
-Use the same procedure to show that the intersection of multiple finite-state transduction can produce the output language $a^n b^n c^n d^n e^n$.
+Use the same procedure to show that the intersection of multiple finite-state transductions can produce the output language $a^n b^n c^n d^n e^n$.
 \end{exercise}
 
 
@@ -101,3 +101,4 @@ Either way the output has the same length as the input.
 
 Some formalisms such as two-level morphology make extensive use of such padding symbols to ensure that all transductions are equal length relations.
 While this grants intersection closure, it means that inputs and outputs are cluttered with padding symbols, which makes them harder to work with.
+

@@ -15,7 +15,7 @@ Psycholinguistic research suggests that predictable forms are indeed not memoriz
 Whatever the exact facts are, it is clear that a human has to store at least a couple thousand words in their lexicon.
 And a computer program that is written without the productive rules of word formation may need hundreds of thousands of entries in its lexicon.
 In fact, some English word lists for computer programs contain over 400,000 words, including various acronyms, proper names, and so on.
-This raises the question how such a long list can be stored efficiently.
+This raises the question of how such a long list can be stored efficiently.
 Let us first assume the simple case that a list is stored as, well, a list, and see why that isn't feasible for humans and computers alike.
 
 ## Storing a lexicon as lists
@@ -64,7 +64,7 @@ This does not seem to be the case, and even if it were true for humans it would 
 
 Another downside of lists is just how redundant they are as a storage mechanism.
 Consider the words *theory* and *theorize*.
-The two strings share the prefix *theor*, but the way they are stored in the list no sharing is going on at all.
+The two strings share the prefix *theor*, but the way they are stored in the list, no sharing is going on at all.
 Adding *theorize* to a lexicon containing *theory* requires just as many characters/sounds to be added to the list as if we added the made-up word *ethorize*.
 So the cost of adding a new word to a list depends on the length of the word, rather than its similarity to words already in the list.
 Again this does not gel with what we know about the human lexicon, where a new word's relationship to familiar words is an important factor in how easily it is learned.
@@ -79,7 +79,7 @@ Engineers, on the other hand, have already come up with a superior alternative f
 
 We already noted that the storage size problems of lists is due to the fact that they do not share any structure between words even if they look very similar.
 In particular, there is no structure sharing for words that share a prefix.
-So in the list *a, *an*, *any*, *all*, *be*, *bee*, *been*, *bet*, *better*, there is massive overlap between the words, yet they are all treated as completely independent of each other.
+So in the list *a*, *an*, *any*, *all*, *be*, *bee*, *been*, *bet*, *better*, there is massive overlap between the words, yet they are all treated as completely independent of each other.
 Suppose instead that we order this list by the proper prefix relation (recall that a prefix of string $s$ is proper iff it is distinct from $s$).
 The proper prefix relation induces a strict partial order on the set as depicted below.
 
@@ -106,7 +106,7 @@ All these aspects make these trees much more efficient to search through than li
 
 But things are not quite as rosy when we consider storage.
 Each node is still labeled with the full word, so the cost of adding a word still depends on its length.
-Suppose, for example, that we add want to add *bees* to the tree.
+Suppose, for example, that we want to add *bees* to the tree.
 We create a new child of *bee* and label it *bees*.
 This label still requires 4 characters, the same number of characters that we would need to add *bees* to a list.
 In fact, the current tree structure makes adding words even costlier because we also have to record for each node what its mother and daughters are.
@@ -155,7 +155,7 @@ So the tree above expands into the more verbose one below.
 
 Now adding a new word is guaranteed to never involve any node splitting.
 However, the addition of the word itself may require multiple nodes to be added.
-So for *bats*, three nodes must be added: *a* as the daughter of *b*, *t* as the daughter of the previous *a*, and *s* as the daughter of the previous *s*.
+So for *bats*, three nodes must be added: *a* as the daughter of *b*, *t* as the daughter of the previous *a*, and *s* as the daughter of the previous *t*.
 
 The tree above now contains every prefix of a word, but not every prefix may actually be part of the lexicon.
 For example, *bat* has the prefixes *ba* and *b*, which are not words of English.
@@ -171,7 +171,7 @@ Sometimes, prefix trees are drawn with labeled branches instead of labeled nodes
 Going back to our initial comparison, we can now say that prefix trees beat lists on two counts:
 
 - prefix trees can be searched in an efficient manner that is independent of the size of the lexicon,
-- prefix trees can store new words more compactly if they are similar to existing works.
+- prefix trees can store new words more compactly if they are similar to existing words.
 
 It is very likely that prefix trees are still not a psychologically adequate model of humans' mental lexicon.
 Among other things, search in a prefix tree is always equally efficient for all words.

@@ -21,7 +21,7 @@ The idea is that the function maps each position of the tuple/string to the symb
 The string *aaba* can be regarded as a function $f$ with $0 \mapsto a$, $1 \mapsto a$, $2 \mapsto b$, $3 \mapsto a$.
 \end{example}
 
-So each string/tuple can be regarded as function whose domain is an initial subset of the natural numbers (so a set that starts with 0 and doesn't skip any numbers).
+So each string/tuple can be regarded as a function whose domain is an initial subset of the natural numbers (so a set that starts with 0 and doesn't skip any numbers).
 The co-domain of the function depends on the chosen alphabet.
 
 \begin{exercise}
@@ -35,7 +35,7 @@ Define the corresponding functions (with suitable domains and co-domains) for th
 \end{exercise}
 
 \begin{exercise}
-Assume that $g$ is a function with domain $\setof{0, 1, 2, \ldots, 7}$ such that $g$ maps to $x$ to $a$ if $x$ is odd and at least 5.
+Assume that $g$ is a function with domain $\setof{0, 1, 2, \ldots, 7}$ such that $g$ maps $x$ to $a$ if $x$ is odd and at least 5.
 In all other cases, $x$ is mapped to $b$.
 What is the string defined by $g$?
 \end{exercise}
@@ -45,7 +45,7 @@ By downward-closed we mean that for every $y \in D$ and $x < y$, it must be the 
 So $4 \in D$ implies $3 \in D$, $2 \in D$, $1 \in D$, and $0 \in D$.
 
 \begin{example}
-The set $S \is \setof{0,1,2,4,5}$ is not downward closed because $4 \in S$ and $3 < 4$, yet $3 \notin S$.
+The set $S \is \setof{0,1,2,4,5}$ is not downward-closed because $4 \in S$ and $3 < 4$, yet $3 \notin S$.
 \end{example}
 
 \begin{exercise}
@@ -135,7 +135,7 @@ Annotate each node in the tree below with its Gorn address.
 \input_mid{./tree_exercise.forest}
 \end{exercise}
 
-With Gorn addresses, is it very easy to define trees.
+With Gorn addresses, it is very easy to define trees.
 
 \begin{definition}
 A **$\Sigma$-labeled Gorn tree domain** (or simply *$\Sigma$-tree*) is a pair $\tuple{D, \ell}$, where $D \subseteq \mathbb{N}^*$ is the set of nodes in the tree and  $\ell: D \rightarrow \Sigma$ is a (total) labeling function.
@@ -177,7 +177,7 @@ And here is its counterpart with Gorn addresses:
 \input_mid{./tree_psg_gorn.forest}
 
 The node at address $10$ labeled VP is the parent of V and NP at address $100$ and $101$, respectively.
-This VP node is the daughter of node the node at address $1$, which is also labeled VP.
+This VP node is the daughter of the node at address $1$, which is also labeled VP.
 \end{example}
 
 The "node above you" analogy is not a formal definition of course, it's just a convention for how we draw those trees.
@@ -406,13 +406,13 @@ But by assumption this implies that every permutation of $u$ is also well-formed
 This contradicts the initial claim that $t$ is ill-formed, which shows that there can be no such precedence requirement $P$.
 
 So if you allow all possible orders, you can still have ordered trees without being able to discriminate between trees based on their precedence relations.
-This makes it possible for linguists to have their cake and eat it too: we get a computationally and mathematically better behaved data structure without running into the question why precedence does not seem to matter much in syntax (according to at least some syntacticians, that is).
+This makes it possible for linguists to have their cake and eat it too: we get a computationally and mathematically better behaved data structure without running into the question of why precedence does not seem to matter much in syntax (according to at least some syntacticians, it does).
 
 
 ## C-Command
 
 C-command has been the most important relation in syntax for many decades.
-It's importance has decreased somewhat in recent years, but it is still noteworthy for being a genuinely linguistic notion.
+Its importance has decreased somewhat in recent years, but it is still noteworthy for being a genuinely linguistic notion.
 Whereas the relations we discussed so far are also useful in computer science, c-command is a purely linguistic notion.
 Intuitively, a node c-commands everything its sisters reflexively dominate.
 If a node has no sisters, then it c-commands whatever its mother c-commands.

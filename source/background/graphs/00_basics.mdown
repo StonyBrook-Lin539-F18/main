@@ -6,7 +6,7 @@
 
 A graph consists of at least two components. 
 The first is the set of nodes.
-When talking about graphs, every node is usually called a **vertex**, so instead of the graph's set of nodes we talk about the graph's set $V$ of *jvertices**.
+When talking about graphs, every node is usually called a **vertex**, so instead of the graph's set of nodes we talk about the graph's set $V$ of **vertices**.
 In addition, there is an edge relation $E \subseteq V \times V$ that connects vertices to each other.
 When drawing graphs, the elements of $E$ are represented by arrows.
 
@@ -41,7 +41,7 @@ The graph depicted below has $\setof{0,1,2,\ldots,11}$ as its set of vertices, a
 
 By default, we take the edges of a graph to be *directed*: $a E b$ does not imply $b E a$.
 This is why we depicted edges with arrows.
-You may think of them as a one-way roads.
+You may think of them as one-way roads.
 
 In the special case where $E$ is symmetric, we call the graph **undirected**.
 It is customary to draw undirected graphs with undirected edges rather than separate arrows in both directions.
@@ -67,7 +67,7 @@ Either one is fine, of course, but for linguistics directed graphs are usually m
 
 
 \begin{exercise}
-For each on the hierarchies listed below, define its corresponding graph.
+For each of the hierarchies listed below, define its corresponding graph.
 
 <ol>
 <li>the person hierarchy</li>
