@@ -101,3 +101,4 @@ Either way the output has the same length as the input.
 
 Some formalisms such as two-level morphology make extensive use of such padding symbols to ensure that all transductions are equal length relations.
 While this grants intersection closure, it means that inputs and outputs are cluttered with padding symbols, which makes them harder to work with.
+
