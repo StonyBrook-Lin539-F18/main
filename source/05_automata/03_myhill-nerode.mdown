@@ -6,8 +6,8 @@ One of the most intriguing results of formal language theory is that FSAs are qu
 
 In order to see this, we first need a suitable equivalence relation: the **right congruence relation** $\equiv_L$ with respect to some string language $L$.
 Let $L$ be some arbitrary set of strings over $\Sigma$.
-Then $u \equiv_L v$ iff have the same **good continuations**.
-That is to say, if we can add some string $s$ to $u$ and get a member of $L$, then we can also add $s$ to $v$ and get a member of $v$ (and the other way round).
+Then $u \equiv_L v$ iff $u$ and $v$ have the same **good continuations**.
+That is to say, if we can add some string $s$ to $u$ and get a member of $L$, then we can also add $s$ to $v$ and get a member of $L$ (and the other way round).
 
 \begin{example}
 Let $L \is (ab)^+$.
@@ -41,7 +41,7 @@ All these equivalence classes are connected by a relation $\Delta$ such that $[x
 \begin{example}
 The equivalence class $[\String{ab}]$ with respect to $\equiv_L$ contains $\String{\emptystring}$, $\String{ab}$, $\String{abab}$, and so on.
 It is $a$-related to $[\String{aba}] \is \setof{\String{a}, \String{aba}, \String{ababa}, \ldots}$.
-In addition, $[\String{ab}$ is $b$-related to $[\String{abb}]$, which contains all strings that are not members of $L$ (i.e. $\Sigma^* - L$).
+In addition, $[\String{ab}]$ is $b$-related to $[\String{abb}]$, which contains all strings that are not members of $L$ (i.e. $\Sigma^* - L$).
 \end{example}
 
 The equivalence classes, combined with $\Delta$, form a quotient structure: instead of adding a symbol $a$ to a string $s$ and then computing the good continuations of $s \stringcat a$, one can immediately move from $[s]$ to $[sa]$.
@@ -64,14 +64,14 @@ For an equivalence relation to have **finite index** means that it induces only 
 So the Myhill-Nerode theorem states that a string language is regular iff its quotient structure under $\equiv_L$ has only finitely many equivalence classes.
 But remember, these equivalence classes correspond to what we represent as states in an FSA. 
 We already know that a language is regular iff it is recognized by an FSA, and FSAs only have finitely many states, i.e. equivalence classes.
-This is the connection exploited by the Myhill Nerode theorem.
+This is the connection exploited by the Myhill-Nerode theorem.
 
 Let's look at it step by step.
 If a language $L$ is recognized by some FSA, then $\equiv_L$ induces only finitely many equivalence classes.
 Here's why this must be the case: consider two arbitrary strings $s$ and $t$ of $\Sigma^*$.
 We will look at how some arbitrary deterministic FSA $A$ behaves with respect to those strings.
 To simplify things, we will assume that $A$ has a sink.
-As adding a sink is trivial, this simplifying assumption do not endanger the validity of the argument.
+As adding a sink is trivial, this simplifying assumption does not endanger the validity of the argument.
 
 Suppose that the runs $r(s)$ and $r(t)$ of $A$ over $s$ and $t$ end in the same state $q$.
 Now if $u$ is a good continuation of $s$ with respect to $L$, then there must be some path from $q$ to a final state.
@@ -85,7 +85,7 @@ But since $A$ has only finitely many states, there can be only finitely many equ
 And we know from our previous observations that $s \equiv_A t$ implies $s \equiv_L t$.
 So the fact that $\equiv_A$ has finite index implies that $\equiv_L$ has finite index.
 
-The same reasoning can be applied in the other direction to show that whenever $\equiv_L$ has finite index, once can construct an FSA from $\equiv_L$ that recognizes a string $s$ iff $s \in L$.
+The same reasoning can be applied in the other direction to show that whenever $\equiv_L$ has finite index, one can construct an FSA from $\equiv_L$ that recognizes a string $s$ iff $s \in L$.
 
 And here's why this result is important: it allows us to show that some string languages are not regular.
 
@@ -94,7 +94,7 @@ Consider the string language $a^n b^n$.
 The good continuations of $a$ are $b$, $abb$, $aabbb$, and so on, i.e. $a^n b^{n+1}$.
 The good continuations of $aa$, on the other hand, are $bb$, $abbb$, $aabbbb$, i.e. $a^n b^{n+2}$.
 In general, the good continuations of $a^n$ are $a^m b^{m+n}$.
-But this entails that $[a]$, $[aa]$, $[aaa]$, \ldots are all distinct.
+But this entails that $[a]$, $[aa]$, $[aaa]$, $\ldots$ are all distinct.
 So the quotient structure contains a separate equivalence class for every string $s$ over the alphabet $\setof{a}$.
 Since there are infinitely many such strings, the quotient structure must contain infinitely many equivalence classes.
 In other words, $\equiv_L$ does not have finite index, wherefore $L$ is not regular.
